@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowUp, ArrowUpRight, ChevronDown } from "lucide-react";
+import { FooterBirds } from "./footer-birds";
+import { FooterHills } from "./footer-scene";
 import { Lines, Roll, v } from "./ui";
 
 const teaLinks = [
@@ -74,8 +76,12 @@ export function Footer() {
         <div><h4>Visit</h4><p>Colombo, Sri Lanka</p><p>Minutes from the Port<br />of Colombo & BIA</p><Link className="tlink" href="/contact">Start a conversation<ArrowUpRight className="inline-arrow" size={14} strokeWidth={1.8} aria-hidden="true" /></Link></div>
       </div>
     </div>
-    <div className="footer-giant split" data-reveal="split" aria-label="Tea & Herb">
-      {giant.map((c, i) => <span className={c === "&" ? "line footer-ampersand" : "line"} key={i}><span style={v({ "--d": i })}>{c === "&" ? <em>&</em> : c}</span></span>)}
+    <div className="footer-land">
+      <FooterBirds />
+      <div className="footer-giant split" data-reveal="split" aria-label="Tea & Herb">
+        {giant.map((c, i) => <span className={c === "&" ? "line footer-ampersand" : "line"} key={i}><span style={v({ "--d": i })}>{c === "&" ? <em>&</em> : c}</span></span>)}
+      </div>
+      <FooterHills />
     </div>
     <div className="footer-bottom">
       <Link className="wordmark footer-wordmark" href="/"><Wordmark /></Link>

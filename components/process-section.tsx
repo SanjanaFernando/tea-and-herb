@@ -63,7 +63,7 @@ const steps: Step[] = [
     lines: ["Minutes from the Port of Colombo", "and Bandaranaike airport, we send", "Ceylon tea to more than twenty", "markets around the world."],
     notes: [
       { text: "Port of Colombo", at: [-1.25, 0.56], align: "middle", arrow: [[-1.25, 0.45], [-1.32, 0.2], [-1.2, -0.34]] },
-      { text: "20+ markets", at: [1.95, 1.36], arrow: [[1.9, 1.3], [1.66, 1.32], [1.46, 1.12]] },
+      { text: "20+ markets", at: [2.2, 0.8], arrow: [[2.22, 0.66], [2.22, 0.48], [2.04, 0.4]] },
     ],
   },
 ];
@@ -140,7 +140,7 @@ export function ProcessSection() {
     gsap.to(proxy, {
       p: 1, ease: "none",
       scrollTrigger: {
-        trigger: frame.current, pin: true, start: "top top", end: `+=${STEPS * 100}%`, scrub: reduce ? true : 0.6, anticipatePin: 1,
+        trigger: frame.current, pin: true, start: "top top", end: "+=100%", scrub: reduce ? true : 0.6, anticipatePin: 1,
         onToggle: (self) => root.classList.toggle("in-process", self.isActive),
       },
       onUpdate: () => {
