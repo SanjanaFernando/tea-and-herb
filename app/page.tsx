@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { AboutSection } from "@/components/about-section";
 import { BackgroundVideo } from "@/components/background-video";
+import { ProcessSection } from "@/components/process-section";
 import { SolutionList } from "@/components/solution-list";
 import { Badge, Leaves, Lines, Marquee, Roll, v } from "@/components/ui";
 
@@ -15,14 +16,6 @@ const IMG = {
 };
 
 const grades = ["Orthodox", "CTC", "Green", "White", "Silver Tips", "Single Estate", "Flavoured", "Herbal infusions"];
-
-const journey = [
-  ["01", "Bush", "Selected from Ceylon’s high, mid and low-grown regions.", "/images/journey/bush.webp"],
-  ["02", "Taste", "Forty years of tasting experience guide every single lot.", "/images/journey/taste.webp"],
-  ["03", "Blend", "Custom blending and flavouring, shaped around your brief.", "/images/journey/blend.webp"],
-  ["04", "Pack", "Tea bags, pouches, tins and cartons — packed in-house.", "/images/journey/pack.webp"],
-  ["05", "Ship", "Minutes from the Port of Colombo and Bandaranaike airport.", "/images/journey/ship.webp"],
-];
 
 const solutions = [
   { n: "01", title: "Bulk tea", desc: "Carefully sourced Ceylon grades, ready for your market.", href: "/bulk-tea", image: photo(IMG.leaf, 700) },
@@ -61,26 +54,8 @@ export default function Home() {
     {/* ABOUT — GSAP scroll scenes + Framer Motion state transitions */}
     <AboutSection />
 
-    {/* JOURNEY — pinned horizontal scroll */}
-    <section className="journey" data-hscroll>
-      <div className="journey-sticky">
-        <div className="journey-head">
-          <div><span className="eyebrow light">02 / One house, many hands</span><h2 className="display split" data-reveal="split"><Lines lines={[<>Bush to cup, <em>under</em></>, <em key="r">one roof.</em>]} /></h2></div>
-          <div className="journey-progress"><small>SCROLL THE JOURNEY</small><span><i /></span></div>
-        </div>
-        <div className="journey-track" data-track>
-          <div className="j-intro">
-            <p>Care you can see. <em>Quality you can taste.</em></p>
-            <Link className="btn btn-light" href="/capabilities" data-magnetic><Roll>Inside our house</Roll><span className="btn-ico"><ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" /></span></Link>
-          </div>
-          {journey.map(([n, title, desc, img]) => <article className="j-card" key={n} data-cursor="Explore">
-            <div className="j-img" style={{ backgroundImage: `url(${img})` }} />
-            <span className="j-num">{n}</span>
-            <div className="j-body"><h3>{title}</h3><p>{desc}</p></div>
-          </article>)}
-        </div>
-      </div>
-    </section>
+    {/* PROCESS — pinned, scroll-driven: one sketched leaf falls through the making of a tea */}
+    <ProcessSection />
 
     {/* SOLUTIONS */}
     <section className="section solutions">
