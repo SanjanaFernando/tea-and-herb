@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { AboutSection } from "@/components/about-section";
 import { BackgroundVideo } from "@/components/background-video";
-import { CompanyBrands } from "@/components/company-brands";
 import { SolutionList } from "@/components/solution-list";
 import { Badge, Leaves, Lines, Marquee, Roll, v } from "@/components/ui";
 
@@ -60,7 +59,7 @@ export default function Home() {
     <Marquee items={grades} speed={45} />
 
     {/* ABOUT — GSAP scroll scenes + Framer Motion state transitions */}
-    <AboutSection><CompanyBrands /></AboutSection>
+    <AboutSection />
 
     {/* JOURNEY — pinned horizontal scroll */}
     <section className="journey" data-hscroll>
