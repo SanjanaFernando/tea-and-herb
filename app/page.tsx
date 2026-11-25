@@ -47,7 +47,6 @@ export default function Home() {
       <Leaves />
       <div className="hero-meta" data-reveal="fade"><span>SRI LANKAN TEA EXPORTER · REGISTERED 1998</span><span>06°56′ N / 79°52′ E</span></div>
       <div className="hero-content" data-parallax="-0.25">
-        <p className="eyebrow light" data-reveal="up" style={v({ "--rd": ".1s" })}>THE TEA & HERB COMPANY · COLOMBO</p>
         <h1 className="display split" data-reveal="split"><Lines lines={["Rooted in", <>the <em>island.</em></>, "Made for the world."]} /></h1>
         <div className="hero-bottom" data-reveal="up" style={v({ "--rd": ".55s" })}>
           <p>Bulk Ceylon tea, speciality blends and private label production from Sri Lanka.</p>
@@ -142,7 +141,7 @@ export default function Home() {
 
     {/* CLOSING */}
     <section className="closing closing-with-video">
-      <BackgroundVideo src="/media/tea-plantation-timelapse.mp4" poster="/media/tea-plantation-timelapse.webp" />
+      <BackgroundVideo src="/media/tea-bloom.mp4" poster="/media/tea-bloom.webp" />
       <span className="eyebrow light" data-reveal="up">The next good thing starts here</span>
       <h2 className="display split" data-reveal="split"><Lines lines={["What are you", <em key="i">imagining?</em>]} /></h2>
       <Link className="round-cta" href="/contact" data-magnetic><span>Tell us<br />about it<ArrowUpRight className="inline-arrow" size={16} strokeWidth={1.8} aria-hidden="true" /></span></Link>

@@ -164,6 +164,7 @@ a:hover .roll>span,button:hover .roll>span{transform:translateY(-100%)}
 .loaded .leaf{opacity:var(--o,.75)}
 .leaf svg{display:block;width:100%;animation:leaf-float var(--dur) ease-in-out infinite alternate}
 .hero-meta{position:absolute;top:128px;left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;font-size:11px;color:#ffffff99}
+.hero-meta>span:first-child{font-size:clamp(14px,1.25vw,18px);line-height:1.3}
 .hero-meta span:last-child{font-family:var(--font-body)}
 .hero-content{position:absolute;left:var(--gutter);right:var(--gutter);bottom:clamp(96px,13vh,150px);translate:0 var(--py,0px)}
 .hero h1{font-size:clamp(60px,9.6vw,158px);margin:24px 0 36px}
@@ -329,7 +330,7 @@ a:hover .roll>span,button:hover .roll>span{transform:translateY(-100%)}
 .background-video-toggle{position:absolute;top:24px;right:var(--gutter);width:44px;height:44px;display:grid;place-items:center;border:1px solid #ffffff66;border-radius:50%;background:#0c1810b3;color:#fff}
 .background-video-toggle:hover{background:var(--green)}
 .brand-content{width:100%;padding:0 var(--gutter) clamp(60px,9vw,120px)}
-.brand h2{font-size:clamp(84px,14vw,240px);margin:22px 0 32px}
+.brand h2{font-size:clamp(48px,8vw,132px);margin:22px 0 32px}
 .brand h2 .line{padding-bottom:.24em;margin-bottom:-.24em}
 .brand-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
 .brand-row p{font-size:clamp(20px,1.8vw,26px);line-height:1.3;color:#ffffffd0;margin:0;max-width:34ch}
@@ -364,7 +365,10 @@ a:hover .roll>span,button:hover .roll>span{transform:translateY(-100%)}
 /* ============ CLOSING ============ */
 .closing{position:relative;overflow:hidden;padding:clamp(110px,14vw,200px) var(--gutter) clamp(90px,10vw,140px);background:var(--green);color:var(--paper);text-align:center}
 .closing-with-video{isolation:isolate}
-.closing-with-video::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 42%,#0c1810d9,#0c181073 78%),linear-gradient(0deg,#0c1810e6,transparent 52%)}
+.closing-with-video::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 60% 55% at 50% 40%,#0a120dbf,#0a120d59 70%,#0a120d26),linear-gradient(0deg,#0c1810f2,transparent 45%)}
+/* Tea bloom: slow drift so the infusion feels alive even between frames. */
+.closing-with-video .background-video{animation:bloom-drift 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes bloom-drift{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.16) translate3d(-2%,-1.5%,0)}}
 .closing h2{font-size:clamp(64px,10.5vw,180px);margin:26px auto 54px}
 .round-cta{display:inline-grid;place-items:center;width:clamp(140px,13vw,190px);aspect-ratio:1;border-radius:50%;background:var(--gold);color:var(--green);font-size:15px;line-height:1.35}
 .round-cta:hover{background:var(--paper);scale:1.08}
@@ -488,7 +492,6 @@ a:hover .roll>span,button:hover .roll>span{transform:translateY(-100%)}
   .cards>div:last-child .card-img{aspect-ratio:4/5}
   .paths-head .badge{--bs:96px}
   .brand::after{background:linear-gradient(0deg,#0c1810f2,#0c1810b3 60%,#0c181026)}
-  .brand h2{font-size:clamp(68px,21vw,110px)}
   .footer-cols{grid-template-columns:1fr 1fr}
   .footer-cols>div:last-child{grid-column:1/-1}
   .footer-bottom>span{display:none}
