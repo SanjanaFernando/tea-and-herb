@@ -82,12 +82,14 @@ export function Footer() {
         {giant.map((c, i) => <span className={c === "&" ? "line footer-ampersand" : "line"} key={i}><span style={v({ "--d": i })}>{c === "&" ? <em>&</em> : c}</span></span>)}
       </div>
       <FooterHills />
-    </div>
-    <div className="footer-bottom">
-      <Link className="wordmark footer-wordmark" href="/"><Wordmark /></Link>
-      <span>From bush to cup, with care.</span>
-      <small>© 2026 THE TEA & HERB COMPANY</small>
-      <button className="to-top" onClick={() => scrollTo({ top: 0, behavior: "smooth" })} data-magnetic aria-label="Back to top"><ArrowUp size={20} strokeWidth={1.8} aria-hidden="true" /></button>
+      <div className="footer-bottom">
+        <Link className="wordmark footer-wordmark" href="/"><Wordmark /></Link>
+        <p className="footer-tagline">From bush to cup, <em>with care.</em></p>
+        <div className="footer-end">
+          <small>© 2026 The Tea & Herb Company</small>
+          <button className="to-top" onClick={() => scrollTo({ top: 0, behavior: "smooth" })} data-magnetic aria-label="Back to top"><ArrowUp size={18} strokeWidth={1.8} aria-hidden="true" /></button>
+        </div>
+      </div>
     </div>
   </footer>;
 }
